@@ -38,15 +38,15 @@ function startTimer() {
                 timerDisplay.textContent = '00:00';
                 playAlertSound(function () {
                     if (mode === 5) {
-                        showAlert('Đếm ngược 5 phút đã hoàn thành!');
+                        showAlert('Bạn đã hoàn thành 5 phút nghỉ giải lao. Giờ hãy quay lại làm việc nào!');
                     } else if (mode === 15) {
-                        showAlert('Đếm ngược 15 phút đã hoàn thành!');
+                        showAlert('Bạn đã hoàn thành 15 phút nghỉ giải lao. Giờ hãy quay lại làm việc nào!');
                     } else if (mode === 25) {
                         counter++;
                         if (counter % 4 === 0) {
-                            showAlert('Nghỉ 15 phút dài!');
+                            showAlert('Bạn đã hoàn thành 4 lần làm việc 25 phút. Giờ bạn hãy nghỉ giải lao 15 phút!');
                         } else {
-                            showAlert('Đếm ngược 25 phút đã hoàn thành!');
+                            showAlert('Bạn đã hoàn thành 25 phút làm việc. Giờ hãy nghỉ giải lao 5 phút!');
                         }
                     }
                 });
@@ -214,7 +214,7 @@ function handleTaskListClick(event) {
         }
     }
     localStorage.setItem('taskList', taskList.innerHTML);
-    
+
     // cho item vừa check xuống cuối danh sách
     // else if (target.type === 'checkbox') {
     //     var taskItem = target.parentNode;
