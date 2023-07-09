@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro thời gian làm việc</title>
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Ứng dụng đếm ngược Pomodoro</h1>
+        <div class="timer">25:00</div>
+        <div>
+            <button id="startBtn" class="btn btn-start">Bắt đầu</button>
+            <button id="pauseBtn" class="btn btn-pause" style="display: none;">Tạm dừng</button>
+            <button id="mode25Btn" class="btn btn-25-min">25 phút</button>
+            <button id="mode5Btn" class="btn btn-5-min">5 phút</button>
+            <button id="mode15Btn" class="btn btn-15-min">15 phút</button>
+            <button id="resetBtn" class="btn btn-reset">Đặt lại</button>
+        </div>
+
+        <!-- Thêm âm thanh thông báo -->
+        <audio id="alertSound" src="alert.mp3"></audio>
+
+        <div class="todo-list">
+            <h2 class="listJobTxt">Danh sách công việc</h2>
+            <div class="addJob">
+                <textarea name="job" form="form-job" placeholder="Thêm công việc" class="job" id="newTaskInput"></textarea>
+                <button id="addTaskBtn" class="btn btn-them">Thêm</button>
+            </div>
+            <ul id="taskList">
+                <li class="task-item">
+                    <input type="checkbox" id="checkbox1" class="checkbox">
+                    <label for="checkbox1">Task 1</label>
+                  </li>
+                  
+            </ul>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
